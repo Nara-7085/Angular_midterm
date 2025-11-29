@@ -18,6 +18,15 @@ export class App {
   student_list = signal<any[]>([]);
   update_index: number | null = null;
 
+
+  generateId(length = 5) {
+    let id = '';
+    for (let i = 0; i < length; i++) {
+      id += Math.floor(Math.random() * 10); 
+    }
+    return id;
+  }
+
   save() {
     const first = this.firstname.trim();
     const last = this.lastname.trim();
@@ -54,10 +63,7 @@ export class App {
       this.update_index = null;
     } else {
       const newStudent = {
-        id:
-          this.student_list().length > 0
-            ? this.student_list()[this.student_list().length - 1].id + 1
-            : 1,
+        id: this.generateId(),
         firstname: first,
         lastname: last,
         age: this.age,

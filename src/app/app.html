@@ -60,24 +60,22 @@
             </thead>
 
             <tbody>
-              <tr *ngFor="let student of student_list(); let i = index">
-                <td>{{ i + 1 }}</td>
-                <td>{{ student.firstname }}</td>
-                <td>{{ student.lastname }}</td>
-                <td>{{ student.age }}</td>
-                <td class="text-capitalize">{{ student.gender }}</td>
+  <tr *ngFor="let student of student_list(); let i = index">
+  <td>{{ student.id }}</td>
+  <td>{{ student.firstname }}</td>
+  <td>{{ student.lastname }}</td>
+  <td>{{ student.age }}</td>
+  <td class="text-capitalize">{{ student.gender }}</td>
 
-                <td class="d-flex gap-2">
-                  <button class="btn btn-warning btn-sm" (click)="editStudent(student, i)">
-                    Edit
-                  </button>
-                  <button class="btn btn-danger btn-sm" (click)="deleteStudent(i)">Delete</button>
-                </td>
-              </tr>
-
-              <tr *ngIf="student_list().length === 0">
-                <td colspan="6" class="text-center py-3 text-muted">No records found.</td>
-              </tr>
+  <td class="d-flex gap-2">
+    <button class="btn btn-warning btn-sm" (click)="editStudent(student, i)">
+      Edit
+    </button>
+    <button class="btn btn-danger btn-sm" (click)="deleteStudent(i)">
+      Delete
+    </button>
+  </td>
+</tr>
             </tbody>
           </table>
         </div>
