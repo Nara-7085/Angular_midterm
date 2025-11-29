@@ -1,0 +1,39 @@
+
+.form-card {
+  background: #f8f9fc;
+  border-radius: 12px;
+}
+.form-header {
+  background-color: #4a6cf7;
+}
+.form-input {
+  border: 2px solid #d5d9f1;
+  background-color: #f4f6ff;
+  padding: 5px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: #4a6cf7;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 0.15rem rgba(74, 108, 247, 0.2);
+}
+
+.btn-primary {
+  background-color: #4a6cf7;
+  border-color: #4a6cf7;
+}
+
+.btn-primary:hover {
+  background-color: #3d5bd7;
+  border-color: #3d5bd7;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f3ff;
+}
